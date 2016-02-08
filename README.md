@@ -1,2 +1,3 @@
 # PDLX
-PhD template for LyX
+========================
+> **P**h**D** template for **L**y**X**
