@@ -1,0 +1,536 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 503
+\begin_document
+\begin_header
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{listings}
+\usepackage{nameref}
+\usepackage{hyperref}
+% remove border around hyperlinks [http://tex.stackexchange.com/a/51349]
+ \hypersetup{hidelinks=true}
+\AtBeginDocument{
+ % rename captions without babel
+  \renewcommand{\figurename}{Fig.}
+  \renewcommand{\contentsname}{Table of Contents}
+  \renewcommand{\lstlistlistingname}{List of \lstlistingname s}
+  \renewcommand{\lstlistingname}{Script}
+  \renewcommand\nomname{List of Abbreviations}
+ % formated cross-references [http://wiki.lyx.org/LyX/NewInLyX20#refstyle]
+  %\newref{fig}{refcmd = {Fig. \ref{#1}}}
+  %\newref{eq}{refcmd = {Eq. (\ref{#1})}}
+  %\newref{tab}{refcmd = {Tab. \ref{#1}}}
+  % italic title for \nameref
+   \let\oldnameref\nameref
+   \renewcommand{\nameref}[1]{\emph{\oldnameref{#1}}}
+  % shorthand to add section to TOC
+   \newcommand{\addsectiontotoc}[1]{\addcontentsline{toc}{section}{\nameref{#1}}}
+}
+
+% rename captions with babel [http://tex.stackexchange.com/a/82994]
+%\usepackage[british]{babel}
+%\addto\captionsbritish{
+  %\renewcommand{\figurename}{Fig.}
+  %\renewcommand{\contentsname}{Table of Contents}
+  %\renewcommand{\lstlistingname}{Script}
+  %\renewcommand{\lstlistlistingname}{List of \lstlistingname s}
+%}
+
+% add list of figures, list of tables, bibliography to TOC
+\usepackage[nottoc]{tocbibind}
+
+% add list of listings to TOC [http://www.ctex.org/documents/packages/bibref/tocbibind.pdf section 2.2]
+\renewcommand{\lstlistoflistings}{
+ \begingroup
+  \tocfile{\lstlistlistingname}{lol}
+ \endgroup
+}
+
+% used in bibliography and publication list
+%usepackage{nameref}
+
+% start from new line after paragraph title [http://stackoverflow.com/a/10570955]
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
+   {-3.25ex\@plus -1ex \@minus -.2ex}
+   {1.5ex \@plus .2ex}
+   {\normalfont\normalsize\bfseries}}
+
+% used for leters lists
+%\usepackage{enumitem}
+
+% script syntax coloring
+%\usepackage{listings}
+\usepackage{color}
+%\definecolor{commentcolor}{rgb}{0,0.6,0}
+\definecolor{commentcolor}{rgb}{0.7,0.7,0.7}
+
+% down arrows for release scheme
+\usepackage[all]{xy}
+
+% micro symbol
+ %\usepackage{upgreek,xspace}
+ %\def\Mu{\upmu\xspace}
+
+ %\usepackage{txfonts,xspace}
+ %\def\Mu{\muup\xspace}
+ %\usepackage{lmodern}
+
+ %\usepackage{textcomp,xspace}
+ %\def\Mu{\textmu \xspace}
+ %\usepackage{lmodern}
+
+% clickable references [http://tex.stackexchange.com/a/73865]
+%\usepackage{hyperref}
+\usepackage{breakurl}
+%\hypersetup{
+%    colorlinks,
+%    citecolor=black,
+%    filecolor=black,
+%    linkcolor=black,
+%    urlcolor=black
+%}
+
+% ignore hyphen in compound words
+\def\hyph{-\penalty0\hskip0pt\relax}
+\renewcommand{\-}{\hyph}
+
+%\footref{}
+\usepackage{scrextend}
+
+%\renewcommand{\footnotesize}{\fontsize{8pt}{11pt}\selectfont}
+
+% page numbering
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ofoot{\pagemark}
+\ifoot{\headmark}
+\cfoot{}
+
+% no indent in footnote
+\usepackage[hang,flushmargin]{footmisc}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\begin_local_layout
+CiteEngine authoryear
+Citep*[][]
+Citet*[][]
+Citealt*[][]
+Citealp*[][]
+Citeauthor*[]
+citeyear[]
+citeyearpar[][]
+nocite
+End
+\end_local_layout
+\language british
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style jneurosci
+\use_bibtopic true
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 40mm
+\topmargin 25mm
+\rightmargin 25mm
+\bottommargin 50mm
+\footskip 25mm
+\secnumdepth 4
+\tocdepth 4
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{0.08
+\backslash
+textheight} 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+Huge
+\backslash
+bfseries PDLX }
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scshape PhD Thesis layout}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large
+\backslash
+scshape Lukasz Jablonski }
+\backslash
+par
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+scshape 2016}
+\backslash
+par
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{0.16
+\backslash
+textheight}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand lstlistoflistings
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+About
+\end_layout
+
+\begin_layout Standard
+PDLX is an PhD Thesis layout.
+\end_layout
+
+\begin_layout Standard
+It is available for free at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/lukaszjablonski/PDLX"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:bib"
+
+\end_inset
+
+Bibliography
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{sec:bib}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+addcontentsline{toc}{section}{
+\backslash
+nameref{sec:bib}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addsectiontotoc{sec:bib}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliography"
+options "jneurosci"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:pub"
+
+\end_inset
+
+Publication list
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{sec:pub}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+addcontentsline{toc}{section}{
+\backslash
+nameref{sec:pub}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addsectiontotoc{sec:pub}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "publication_list"
+options "jneurosci"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
