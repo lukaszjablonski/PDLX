@@ -20,6 +20,7 @@ See comments in `thesis.lyx` preample
 
 ## Need something different?
 Try following:
+
 1. http://www.latextemplates.com/
 2. https://bitbucket.org/amiede/classicthesis/downloads
 3. http://www.schestowitz.com/IMG/research/thesis_examples/
