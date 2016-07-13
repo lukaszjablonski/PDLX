@@ -7,7 +7,7 @@
   1. Thesis main text in `thesis.lyx`
   2. Thesis bibliography in `bibliography.bib`
   3. Your publication list in `publication_list.bib`
-  4. Generate pdf with LyX: `Export-> PDF (pdflatex)`
+  4. Generate `thesis.pdf` with LyX: `Export-> PDF (pdflatex)`
 
 ## Author
 Lukasz Jablonski
