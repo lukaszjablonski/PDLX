@@ -2,7 +2,7 @@
 > **P**h**D** template for **L**y**X**
 
 ## Usage
-1. Download files [ZIP package](https://github.com/lukaszjablonski/PDLX/archive/master.zip)
+1. Download files as [ZIP package](https://github.com/lukaszjablonski/PDLX/archive/master.zip)
 2. Edit:
   1. Thesis main text in `thesis.lyx`
   2. Thesis bibliography in `bibliography.bib`
