@@ -1,6 +1,14 @@
 # PDLX
 > **P**h**D** template for **L**y**X**
 
+## Usage
+1. Download files [ZIP package](https://github.com/lukaszjablonski/PDLX/archive/master.zip)
+2. Edit:
+  1. Thesis main text in `thesis.lyx`
+  2. Thesis bibliography in `bibliography.bib`
+  3. Your publication list in `publication_list.bib`
+  4. Generate pdf with LyX: `Export-> PDF (pdflatex)`
+
 ## Author
 Lukasz Jablonski
 
