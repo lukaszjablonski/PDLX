@@ -6,11 +6,20 @@
 \textclass article
 \begin_preamble
 \usepackage{listings}
-\usepackage{nameref}
-\usepackage{hyperref}
+%\usepackage{nameref}
+% vector fonts
+ \usepackage{lmodern}
+ \usepackage[T1]{fontenc}
 % remove border around hyperlinks [http://tex.stackexchange.com/a/51349]
+ \usepackage{hyperref}
  \hypersetup{hidelinks=true}
 \AtBeginDocument{
+ % Short title in bold + long title as \caption [http://tex.stackexchange.com/a/20544]
+  \let\savedCaption=\caption%
+  \renewcommand{\caption}[2][\shortcaption]{%
+   \def\shortcaption{#2}%
+   \savedCaption[{#1}]{\textbf{#1.} #2}%
+  }
  % rename captions without babel
   \renewcommand{\figurename}{Fig.}
   \renewcommand{\contentsname}{Table of Contents}
@@ -18,9 +27,10 @@
   \renewcommand{\lstlistingname}{Script}
   \renewcommand\nomname{List of Abbreviations}
  % formated cross-references [http://wiki.lyx.org/LyX/NewInLyX20#refstyle]
-  %\newref{fig}{refcmd = {Fig. \ref{#1}}}
-  %\newref{eq}{refcmd = {Eq. (\ref{#1})}}
-  %\newref{tab}{refcmd = {Tab. \ref{#1}}}
+  \usepackage{refstyle}
+  \newref{fig}{refcmd = {Fig. \ref{#1}}}
+  \newref{eq}{refcmd = {Eq. (\ref{#1})}}
+  \newref{tab}{refcmd = {Tab. \ref{#1}}}
   % italic title for \nameref
    \let\oldnameref\nameref
    \renewcommand{\nameref}[1]{\emph{\oldnameref{#1}}}
