@@ -16,6 +16,7 @@ Lukasz Jablonski
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
+See comments in `thesis.lyx` preample
 
 ## Need something different?
 Try following:
