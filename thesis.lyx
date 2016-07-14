@@ -5,32 +5,37 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{listings}
-%\usepackage{nameref}
+\usepackage{nameref}
+
 % vector fonts
  \usepackage{lmodern}
  \usepackage[T1]{fontenc}
-% remove border around hyperlinks [http://tex.stackexchange.com/a/51349]
+
+% clickable references [http://tex.stackexchange.com/a/73865]
  \usepackage{hyperref}
+% break long urls
+ \usepackage{breakurl}
+% remove border around hyperlinks [http://tex.stackexchange.com/a/51349]
  \hypersetup{hidelinks=true}
+
 \AtBeginDocument{
- % Short title in bold + long title as \caption [http://tex.stackexchange.com/a/20544]
+ % short title in bold + long title as \caption [http://tex.stackexchange.com/a/20544]
   \let\savedCaption=\caption%
   \renewcommand{\caption}[2][\shortcaption]{%
    \def\shortcaption{#2}%
    \savedCaption[{#1}]{\textbf{#1.} #2}%
   }
- % rename captions without babel
-  \renewcommand{\figurename}{Fig.}
-  \renewcommand{\contentsname}{Table of Contents}
-  \renewcommand{\lstlistlistingname}{List of \lstlistingname s}
-  \renewcommand{\lstlistingname}{Script}
-  \renewcommand\nomname{List of Abbreviations}
- % formated cross-references [http://wiki.lyx.org/LyX/NewInLyX20#refstyle]
-  \usepackage{refstyle}
-  \newref{fig}{refcmd = {Fig. \ref{#1}}}
-  \newref{eq}{refcmd = {Eq. (\ref{#1})}}
-  \newref{tab}{refcmd = {Tab. \ref{#1}}}
+  % rename captions without babel
+   \renewcommand{\figurename}{Fig.}
+   \renewcommand{\contentsname}{Table of Contents}
+   \renewcommand{\lstlistlistingname}{List of \lstlistingname s}
+   \renewcommand{\lstlistingname}{Script}
+   \renewcommand\nomname{List of Abbreviations}
+  % formated cross-references [http://wiki.lyx.org/LyX/NewInLyX20#refstyle]
+   \usepackage{refstyle}
+   \newref{fig}{refcmd = {Fig. \ref{#1}}}
+   \newref{eq}{refcmd = {Eq. (\ref{#1})}}
+   \newref{tab}{refcmd = {Tab. \ref{#1}}}
   % italic title for \nameref
    \let\oldnameref\nameref
    \renewcommand{\nameref}[1]{\emph{\oldnameref{#1}}}
@@ -38,88 +43,43 @@
    \newcommand{\addsectiontotoc}[1]{\addcontentsline{toc}{section}{\nameref{#1}}}
 }
 
-% rename captions with babel [http://tex.stackexchange.com/a/82994]
-%\usepackage[british]{babel}
-%\addto\captionsbritish{
-  %\renewcommand{\figurename}{Fig.}
-  %\renewcommand{\contentsname}{Table of Contents}
-  %\renewcommand{\lstlistingname}{Script}
-  %\renewcommand{\lstlistlistingname}{List of \lstlistingname s}
-%}
-
 % add list of figures, list of tables, bibliography to TOC
-\usepackage[nottoc]{tocbibind}
+ \usepackage[nottoc]{tocbibind}
 
+\usepackage{listings}
 % add list of listings to TOC [http://www.ctex.org/documents/packages/bibref/tocbibind.pdf section 2.2]
-\renewcommand{\lstlistoflistings}{
- \begingroup
-  \tocfile{\lstlistlistingname}{lol}
- \endgroup
-}
-
-% used in bibliography and publication list
-%usepackage{nameref}
+ \renewcommand{\lstlistoflistings}{
+  \begingroup
+   \tocfile{\lstlistlistingname}{lol}
+  \endgroup
+ }
 
 % start from new line after paragraph title [http://stackoverflow.com/a/10570955]
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
+ \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
    {-3.25ex\@plus -1ex \@minus -.2ex}
    {1.5ex \@plus .2ex}
    {\normalfont\normalsize\bfseries}}
 
-% used for leters lists
-%\usepackage{enumitem}
-
-% script syntax coloring
-%\usepackage{listings}
-\usepackage{color}
-%\definecolor{commentcolor}{rgb}{0,0.6,0}
-\definecolor{commentcolor}{rgb}{0.7,0.7,0.7}
-
 % down arrows for release scheme
-\usepackage[all]{xy}
-
-% micro symbol
- %\usepackage{upgreek,xspace}
- %\def\Mu{\upmu\xspace}
-
- %\usepackage{txfonts,xspace}
- %\def\Mu{\muup\xspace}
- %\usepackage{lmodern}
-
- %\usepackage{textcomp,xspace}
- %\def\Mu{\textmu \xspace}
- %\usepackage{lmodern}
-
-% clickable references [http://tex.stackexchange.com/a/73865]
-%\usepackage{hyperref}
-\usepackage{breakurl}
-%\hypersetup{
-%    colorlinks,
-%    citecolor=black,
-%    filecolor=black,
-%    linkcolor=black,
-%    urlcolor=black
-%}
+ \usepackage[all]{xy}
 
 % ignore hyphen in compound words
-\def\hyph{-\penalty0\hskip0pt\relax}
-\renewcommand{\-}{\hyph}
+ \def\hyph{-\penalty0\hskip0pt\relax}
+ \renewcommand{\-}{\hyph}
 
-%\footref{}
-\usepackage{scrextend}
-
+%\usepackage{scrextend}
 %\renewcommand{\footnotesize}{\fontsize{8pt}{11pt}\selectfont}
 
 % page numbering
-\usepackage{scrpage2}
-\pagestyle{scrheadings}
-\clearscrheadfoot
-\ofoot{\pagemark}
-\ifoot{\headmark}
-\cfoot{}
+ \usepackage{scrpage2}
+ \pagestyle{scrheadings}
+ \clearscrheadfoot
+ \ofoot{\pagemark}
+ \ifoot{\headmark}
+ \cfoot{}
 
 % no indent in footnote
-\usepackage[hang,flushmargin]{footmisc}
+ \usepackage[hang,flushmargin]{footmisc}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
