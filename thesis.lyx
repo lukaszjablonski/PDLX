@@ -19,12 +19,6 @@
  \hypersetup{hidelinks=true}
 
 \AtBeginDocument{
- % short title in bold + long title as \caption [http://tex.stackexchange.com/a/20544]
-  \let\savedCaption=\caption%
-  \renewcommand{\caption}[2][\shortcaption]{%
-   \def\shortcaption{#2}%
-   \savedCaption[{#1}]{\textbf{#1.} #2}%
-  }
   % rename captions without babel
    \renewcommand{\figurename}{Fig.}
    \renewcommand{\contentsname}{Table of Contents}
@@ -47,6 +41,9 @@
  \usepackage[nottoc]{tocbibind}
 
 \usepackage{listings}
+% script syntax coloring
+ \usepackage{color}
+ \definecolor{commentcolor}{rgb}{0.7,0.7,0.7}
 % add list of listings to TOC [http://www.ctex.org/documents/packages/bibref/tocbibind.pdf section 2.2]
  \renewcommand{\lstlistoflistings}{
   \begingroup
@@ -54,21 +51,15 @@
   \endgroup
  }
 
-% start from new line after paragraph title [http://stackoverflow.com/a/10570955]
+% start with a new line after paragraph title [http://stackoverflow.com/a/10570955]
  \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
    {-3.25ex\@plus -1ex \@minus -.2ex}
    {1.5ex \@plus .2ex}
    {\normalfont\normalsize\bfseries}}
 
-% down arrows for release scheme
- \usepackage[all]{xy}
-
 % ignore hyphen in compound words
  \def\hyph{-\penalty0\hskip0pt\relax}
  \renewcommand{\-}{\hyph}
-
-%\usepackage{scrextend}
-%\renewcommand{\footnotesize}{\fontsize{8pt}{11pt}\selectfont}
 
 % page numbering
  \usepackage{scrpage2}
@@ -80,6 +71,14 @@
 
 % no indent in footnote
  \usepackage[hang,flushmargin]{footmisc}
+
+
+ % short title in bold + long title as \caption [http://tex.stackexchange.com/a/20544]
+  \let\savedCaption=\caption%
+  \renewcommand{\caption}[2][\shortcaption]{%
+   \def\shortcaption{#2}%
+   \savedCaption[{#1}]{\textbf{#1.} #2}%
+  }
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
