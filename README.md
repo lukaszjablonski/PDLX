@@ -2,6 +2,7 @@
 > **P**h**D** template for **L**y**X**
 
 ## Usage
+It's easy:
 1. Download files as [ZIP package](https://github.com/lukaszjablonski/PDLX/archive/master.zip)
 2. Edit:
   1. main text in `thesis.lyx`
