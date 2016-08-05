@@ -32,4 +32,4 @@ Try following:
 7. https://github.com/kks32/PhDThesisLyX
  
 ## Useful resources
-1. http://www.ncbi.nlm.nih.gov/books/NBK988/
+1. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
