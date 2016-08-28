@@ -1,11 +1,23 @@
 #LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 503
+\lyxformat 506
 \begin_document
 \begin_header
+\save_transient_properties true
 \origin unavailable
 \textclass article
 \begin_preamble
 \usepackage{nameref}
+
+% start sections from new odd page
+ \let\stdsection\section
+ \usepackage{changepage}
+ \strictpagecheck
+ \checkoddpage
+  \ifoddpage
+   \renewcommand*{\section}{\clearpage\stdsection}
+  \else
+   \renewcommand*{\section}{\cleardoublepage\stdsection}
+  \fi
 
 % vector fonts
  \usepackage{lmodern}
@@ -19,6 +31,7 @@
  \hypersetup{hidelinks=true}
 
 \AtBeginDocument{
+\raggedbottom
   % rename captions without babel
    \renewcommand{\figurename}{Fig.}
    \renewcommand{\contentsname}{Table of Contents}
@@ -33,23 +46,12 @@
   % italic title for \nameref
    \let\oldnameref\nameref
    \renewcommand{\nameref}[1]{\emph{\oldnameref{#1}}}
-  % shorthand to add section to TOC
-   \newcommand{\addsectiontotoc}[1]{\addcontentsline{toc}{section}{\nameref{#1}}}
 }
-
-% add list of figures, list of tables, bibliography to TOC
- \usepackage[nottoc]{tocbibind}
 
 \usepackage{listings}
 % script syntax coloring
  \usepackage{color}
  \definecolor{commentcolor}{rgb}{0.7,0.7,0.7}
-% add list of listings to TOC [http://www.ctex.org/documents/packages/bibref/tocbibind.pdf section 2.2]
- \renewcommand{\lstlistoflistings}{
-  \begingroup
-   \tocfile{\lstlistlistingname}{lol}
-  \endgroup
- }
 
 % start with a new line after paragraph title [http://stackoverflow.com/a/10570955]
  \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
@@ -72,13 +74,35 @@
 % no indent in footnote
  \usepackage[hang,flushmargin]{footmisc}
 
+% print nomenclature
+ \let\nomenclOrig\nomenclature
+ \renewcommand*{\nomenclature}[3][]{#2\nomenclOrig[#1]{#2}{#3}}
 
- % short title in bold + long title as \caption [http://tex.stackexchange.com/a/20544]
-  \let\savedCaption=\caption%
-  \renewcommand{\caption}[2][\shortcaption]{%
-   \def\shortcaption{#2}%
-   \savedCaption[{#1}]{\textbf{#1.} #2}%
-  }
+
+% don't add TOC to TOC
+ \usepackage{tocvsec2}
+ \let\toc\tableofcontents
+ \renewcommand*{\tableofcontents}{
+  %\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+ \settocdepth{none} % with tocvsec2
+  \toc
+  %\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+  \resettocdepth % with tocvsec2
+ }
+
+% add all unnumbered sections to TOC [http://tex.stackexchange.com/a/186439]
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\let\oldchapter\section
+\RenewDocumentCommand{\section}{s o m}{%
+  \IfBooleanTF{#1}
+    {\oldchapter*{#3}% \chapter*
+     \IfNoValueTF{#2}
+      {\addcontentsline{toc}{section}{\numberline{}#3}}%  \chapter*{...}
+      {\addcontentsline{toc}{section}{\numberline{}#2}}}% \chapter*[..]{...}
+    {\IfNoValueTF{#2}%
+      {\oldchapter{#3}}%      \chapter{...}
+      {\oldchapter[#2]{#3}}}% \chapter[..]{...}
+}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -116,6 +140,15 @@ End
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref false
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry true
 \use_package amsmath 1
@@ -281,23 +314,9 @@ end{titlepage}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
 \end_inset
 
 
@@ -329,24 +348,10 @@ LatexCommand lstlistoflistings
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "auto"
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
 \end_inset
 
 
@@ -357,7 +362,14 @@ About
 \end_layout
 
 \begin_layout Standard
-PDLX is an PhD Thesis layout.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PDLX"
+description "PhD template for LyX"
+
+\end_inset
+
+ is an PhD Thesis layout.
 \end_layout
 
 \begin_layout Standard
@@ -380,53 +392,8 @@ target "https://github.com/lukaszjablonski/PDLX"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:bib"
-
-\end_inset
-
 Bibliography
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-label{sec:bib}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-addcontentsline{toc}{section}{
-\backslash
-nameref{sec:bib}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addsectiontotoc{sec:bib}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -440,53 +407,8 @@ options "jneurosci"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:pub"
-
-\end_inset
-
 Publication list
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-label{sec:pub}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-addcontentsline{toc}{section}{
-\backslash
-nameref{sec:pub}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addsectiontotoc{sec:pub}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
