@@ -30,6 +30,7 @@ Try following:
 5. https://code.google.com/archive/p/uthm-thesis-lyx/
 6. https://github.com/klenje/unibo-thesis-lyx
 7. https://github.com/kks32/PhDThesisLyX
+8. https://sites.google.com/site/lyxthesistemplate/
  
 ## Useful resources
 1. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
