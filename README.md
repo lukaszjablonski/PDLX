@@ -27,7 +27,6 @@ Try following:
 2. https://bitbucket.org/amiede/classicthesis/downloads
 3. http://www.schestowitz.com/IMG/research/thesis_examples/
 4. http://wellbeing.ihsp.mcgill.ca/latex/ubcTraditionalThesisLyx.html
-5. https://code.google.com/archive/p/uthm-thesis-lyx/
 6. https://github.com/klenje/unibo-thesis-lyx
 7. https://github.com/kks32/PhDThesisLyX
 8. https://sites.google.com/site/lyxthesistemplate/
