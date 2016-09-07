@@ -29,6 +29,7 @@ Try following:
 4. http://wellbeing.ihsp.mcgill.ca/latex/ubcTraditionalThesisLyx.html
 6. https://github.com/klenje/unibo-thesis-lyx
 7. https://github.com/kks32/PhDThesisLyX
+8. https://github.com/kks32/phd-thesis-template/
 8. https://sites.google.com/site/lyxthesistemplate/
 9. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
  
