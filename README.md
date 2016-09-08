@@ -20,7 +20,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 See comments in `thesis.lyx` preamble
 
-## Need something different?
+## Useful resources
+1. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
+
+## Alternatives
 Try following:
 
 1. http://www.latextemplates.com/
@@ -33,6 +36,4 @@ Try following:
 9. https://github.com/suchow/Dissertate (http://dissertate.io/)
 8. https://sites.google.com/site/lyxthesistemplate/
 9. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
- 
-## Useful resources
-1. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
+10. https://www.sharelatex.com/templates/thesis
