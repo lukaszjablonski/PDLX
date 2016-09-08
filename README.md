@@ -24,8 +24,6 @@ See comments in `thesis.lyx` preamble
 1. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
 
 ## Alternatives
-Try following:
-
 1. http://www.latextemplates.com/
 2. https://bitbucket.org/amiede/classicthesis/downloads
 3. http://www.schestowitz.com/IMG/research/thesis_examples/
