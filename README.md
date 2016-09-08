@@ -30,7 +30,7 @@ Try following:
 6. https://github.com/klenje/unibo-thesis-lyx
 7. https://github.com/kks32/PhDThesisLyX
 8. https://github.com/kks32/phd-thesis-template/
-9. https://github.com/suchow/Dissertate
+9. https://github.com/suchow/Dissertate (http://dissertate.io/)
 8. https://sites.google.com/site/lyxthesistemplate/
 9. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
  
