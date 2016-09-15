@@ -23,16 +23,19 @@ See comments in `thesis.lyx` preamble
 ## Useful resources
 1. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
 
-## Alternatives
-1. http://www.latextemplates.com/
-2. https://bitbucket.org/amiede/classicthesis/downloads
-3. http://www.schestowitz.com/IMG/research/thesis_examples/
-4. http://wellbeing.ihsp.mcgill.ca/latex/ubcTraditionalThesisLyx.html
-6. https://github.com/klenje/unibo-thesis-lyx
-7. https://github.com/kks32/PhDThesisLyX
-8. https://github.com/kks32/phd-thesis-template/
-9. https://github.com/suchow/Dissertate (http://dissertate.io/)
-10. https://github.com/telegraphic/Oxford-LyX-Thesis-Template
-8. https://sites.google.com/site/lyxthesistemplate/
-9. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
-10. https://www.sharelatex.com/templates/thesis
+## Alternative templates
+LyX:
+1. https://bitbucket.org/amiede/classicthesis/downloads
+2. http://www.schestowitz.com/IMG/research/thesis_examples/
+3. http://wellbeing.ihsp.mcgill.ca/latex/ubcTraditionalThesisLyx.html
+4. https://github.com/klenje/unibo-thesis-lyx
+5. https://github.com/kks32/PhDThesisLyX
+6. https://github.com/telegraphic/Oxford-LyX-Thesis-Template
+7. https://sites.google.com/site/lyxthesistemplate/
+
+LaTeX:
+1. https://github.com/kks32/phd-thesis-template/
+2. http://www.latextemplates.com/
+3. https://github.com/suchow/Dissertate (http://dissertate.io/)
+4. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
+5. https://www.sharelatex.com/templates/thesis
