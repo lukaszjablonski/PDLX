@@ -25,6 +25,7 @@ See comments in `thesis.lyx` preamble
 
 ## Alternative templates
 LyX:
+
 1. https://bitbucket.org/amiede/classicthesis/downloads
 2. http://www.schestowitz.com/IMG/research/thesis_examples/
 3. http://wellbeing.ihsp.mcgill.ca/latex/ubcTraditionalThesisLyx.html
@@ -34,6 +35,7 @@ LyX:
 7. https://sites.google.com/site/lyxthesistemplate/
 
 LaTeX:
+
 1. https://github.com/kks32/phd-thesis-template/
 2. http://www.latextemplates.com/
 3. https://github.com/suchow/Dissertate (http://dissertate.io/)
