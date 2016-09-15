@@ -41,3 +41,4 @@ LaTeX:
 3. https://github.com/suchow/Dissertate (http://dissertate.io/)
 4. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
 5. https://www.sharelatex.com/templates/thesis
+6. http://wellbeing.ihsp.mcgill.ca/latex/ubcManuscriptThesis.html
