@@ -21,8 +21,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 See comments in `thesis.lyx` preamble
 
 ## Useful resources
-1. The IEEE-SA Standards Style Manual: https://development.standards.ieee.org/myproject/Public/mytools/draft/styleman.pdf
-2. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
+1. The Chicago Manual of Style Online 16th edition (non-free): http://www.chicagomanualofstyle.org/16/contents.html
+2. The IEEE-SA Standards Style Manual: https://development.standards.ieee.org/myproject/Public/mytools/draft/styleman.pdf
+3. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
 
 ## Alternative templates
 LyX:
