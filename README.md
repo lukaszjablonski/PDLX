@@ -35,7 +35,8 @@ LyX:
 5. https://github.com/kks32/PhDThesisLyX
 6. https://github.com/telegraphic/Oxford-LyX-Thesis-Template
 7. https://github.com/klenje/unibo-thesis-lyx
-8. https://sites.google.com/site/lyxthesistemplate/
+8. https://github.com/SilverLabUCL/simplethesis
+9. https://sites.google.com/site/lyxthesistemplate/
 
 LaTeX:
 
