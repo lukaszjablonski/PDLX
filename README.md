@@ -36,6 +36,7 @@ LyX:
 6. https://github.com/telegraphic/Oxford-LyX-Thesis-Template
 7. https://github.com/klenje/unibo-thesis-lyx
 8. https://sites.google.com/site/lyxthesistemplate/
+9. http://ivpletik.inet.hr/classicthesis/
 
 LaTeX:
 
