@@ -43,7 +43,8 @@ LaTeX:
 1. https://github.com/kks32/phd-thesis-template/
 2. https://github.com/SilverLabUCL/simplethesis
 3. https://github.com/suchow/Dissertate (http://dissertate.io/)
-4. http://www.latextemplates.com/
-5. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
-6. https://www.sharelatex.com/templates/thesis
-7. http://wellbeing.ihsp.mcgill.ca/latex/ubcManuscriptThesis.html
+4. https://github.com/FerrousOxide/PSU-GEOSC-thesis-template
+5. http://www.latextemplates.com/
+6. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
+7. https://www.sharelatex.com/templates/thesis
+8. http://wellbeing.ihsp.mcgill.ca/latex/ubcManuscriptThesis.html
