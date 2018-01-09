@@ -1,52 +1,18 @@
 # PDLX
 > **P**h**D** template for **L**y**X**
 
-## Usage
-It's easy:
-
-1. Download files as [ZIP package](https://github.com/lukaszjablonski/PDLX/archive/master.zip)
+To use it:
+1. Download files as [ZIP package](https://github.com/lukaszjablonski/PDLX/archive/master.zip) (see [all releases](https://github.com/lukaszjablonski/PDLX/releases))
 2. Edit:
-  1. main text in `thesis.lyx`
-  2. bibliography in `bibliography.bib`
-  3. your publication list in `publication_list.bib`
-3. Generate `thesis.pdf` with LyX: `Export-> PDF (pdflatex)`
+    1. Main text in [`thesis.lyx`](thesis.lyx)
+    2. Bibliography in [`bibliography.bib`](bibliography.bib)
+    3. Your publication list in [`publication_list.bib`](publication_list.bib)
+3. Generate [`thesis.pdf`](thesis.pdf) with LyX: `Export-> PDF (pdflatex)`
 
-## Author
-Lukasz Jablonski
+For the preview of the current version see [`thesis.pdf`](thesis.pdf).
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Sources used in this template are acknowledged in comments in the [`thesis.lyx`](thesis.lyx) preamble.
 
-## Acknowledgments
-See comments in `thesis.lyx` preamble
+Made by Lukasz Jablonski. Licensed under the MIT License (MIT).
 
-## Useful resources
-1. The Chicago Manual of Style Online 16th edition (non-free): http://www.chicagomanualofstyle.org/16/contents.html
-2. The IEEE-SA Standards Style Manual: https://development.standards.ieee.org/myproject/Public/mytools/draft/styleman.pdf
-3. The NCBI Style Guide: http://www.ncbi.nlm.nih.gov/books/NBK988/
-4. The ACS Style Guide: http://pubs.acs.org/isbn/9780841239999
-5. The ACS Guidelines for Presenting Mathematical Information: http://pubs.acs.org/paragonplus/submission/acs_math-stylesheet.pdf
-
-## Alternative templates
-LyX:
-
-1. https://bitbucket.org/amiede/classicthesis/downloads
-2. http://www.schestowitz.com/IMG/research/thesis_examples/
-3. http://wellbeing.ihsp.mcgill.ca/latex/ubcTraditionalThesisLyx.html
-4. https://github.com/klenje/unibo-thesis-lyx
-5. https://github.com/kks32/PhDThesisLyX
-6. https://github.com/telegraphic/Oxford-LyX-Thesis-Template
-7. https://github.com/klenje/unibo-thesis-lyx
-8. https://sites.google.com/site/lyxthesistemplate/
-9. http://ivpletik.inet.hr/classicthesis/
-
-LaTeX:
-
-1. https://github.com/kks32/phd-thesis-template/
-2. https://github.com/SilverLabUCL/simplethesis
-3. https://github.com/suchow/Dissertate (http://dissertate.io/)
-4. https://github.com/FerrousOxide/PSU-GEOSC-thesis-template
-5. http://www.latextemplates.com/
-6. https://www.maths.ox.ac.uk/members/it/faqs/latex/thesis-class
-7. https://www.sharelatex.com/templates/thesis
-8. http://wellbeing.ihsp.mcgill.ca/latex/ubcManuscriptThesis.html
+https://github.com/lukaszjablonski/PDLX
